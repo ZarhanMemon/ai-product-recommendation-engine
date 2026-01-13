@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Olist Product Recommender</title>
+</head>
+<body>
+    <h2>Select User</h2>
+    <form action="/recommend" method="post">
+        <select name="user_id">
+            {% for user in users %}
+            <option value="{{ user }}">{{ user }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Show Recommendations</button>
+    </form>
+</body>
+</html>

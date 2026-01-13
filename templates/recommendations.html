@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Product Recommendations</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        table { border-collapse: collapse; width: 95%; margin-bottom: 30px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #f4f4f4; }
+        img { width: 80px; height: auto; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+
+<h2>👤 Customer ID: {{ user_id }}</h2>
+
+<h3>🛒 Purchase History</h3>
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Price ($)</th>
+        <th>Total ($)</th>
+        <th>Order Date</th>
+    </tr>
+    {% for item in bought %}
+    <tr>
+        <td>{{ item.product_name }}</td>
+        <td>{{ item.product_category }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.price_usd }}</td>
+        <td>{{ item.total_amount }}</td>
+        <td>{{ item.order_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>🤖 AI Recommended Products</h3>
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Price ($)</th>
+        <th>Stock</th>
+        <th>Similarity Score</th>
+    </tr>
+    {% for p in recommended %}
+    <tr>
+        <td>
+            {% if p.image_url %}
+            <img src="{{ p.image_url }}">
+            {% else %}
+            N/A
+            {% endif %}
+        </td>
+        <td>{{ p.product_name }}</td>
+        <td>{{ p.product_category }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.stock_quantity }}</td>
+        <td>{{ "%.2f"|format(p.similarity_score) }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/">⬅ Back</a>
+
+</body>
+</html>

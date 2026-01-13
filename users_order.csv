@@ -1,0 +1,51 @@
+customer_id,product_id,product_name,product_category,quantity,price_usd,payment_method,order_date,total_amount
+U1001,P101,iPhone 12,Electronics,1,999.99,Credit Card,2023-01-05,999.99
+U1001,P102,AirPods Pro,Electronics,1,249.99,Paypal,2023-01-05,249.99
+U1002,P201,T-Shirt Classic,Fashion,2,29.99,Credit Card,2023-01-07,59.98
+U1002,P202,Slim Jeans,Fashion,1,59.99,Debit Card,2023-01-07,59.99
+U1003,P301,MacBook Air,Electronics,1,1199.99,Credit Card,2023-01-10,1199.99
+U1003,P302,Wireless Mouse,Electronics,2,29.99,Paypal,2023-01-10,59.98
+U1004,P401,Nike Running Shoes,Footwear,1,89.99,Credit Card,2023-01-12,89.99
+U1004,P402,Adidas Socks,Fashion,3,14.99,Debit Card,2023-01-12,44.97
+U1005,P501,Blender Pro,Home & Kitchen,1,79.99,Credit Card,2023-01-15,79.99
+U1005,P502,Coffee Maker,Home & Kitchen,1,89.99,Paypal,2023-01-15,89.99
+U1006,P601,Yoga Mat,Sports,1,19.99,Credit Card,2023-01-18,19.99
+U1006,P602,Dumbbell Set,Sports,1,89.99,Debit Card,2023-01-18,89.99
+U1007,P701,LED Monitor,Electronics,1,199.99,Credit Card,2023-01-20,199.99
+U1007,P702,HDMI Cable,Electronics,2,29.99,Paypal,2023-01-20,59.98
+U1008,P801,Summer Dress,Fashion,1,44.99,Credit Card,2023-01-22,44.99
+U1008,P802,Handbag,Fashion,1,79.99,Debit Card,2023-01-22,79.99
+U1009,P901,Running Shoes,Footwear,1,89.99,Credit Card,2023-01-25,89.99
+U1009,P902,Flip Flops,Footwear,2,19.99,Paypal,2023-01-25,39.98
+U1010,P1001,Smartwatch,Electronics,1,349.99,Credit Card,2023-01-28,349.99
+U1010,P1002,Fitness Tracker,Electronics,1,99.99,Debit Card,2023-01-28,99.99
+U1001,P301,MacBook Air,Electronics,1,1199.99,Credit Card,2023-01-03,1199.99
+U1001,P501,Blender Pro,Home & Kitchen,1,79.99,Debit Card,2023-01-10,79.99
+U1001,P503,Microwave Oven,Home & Kitchen,1,129.99,Paypal,2023-01-15,129.99
+U1001,P404,Flip Flops,Footwear,2,19.99,Credit Card,2023-01-20,39.98
+U1001,P201,T-Shirt Classic,Fashion,2,29.99,Debit Card,2023-01-25,59.98
+
+U1002,P101,iPhone 12,Electronics,1,999.99,Credit Card,2023-01-04,999.99
+U1002,P504,Toaster,Home & Kitchen,1,49.99,Paypal,2023-01-08,49.99
+U1002,P602,Dumbbell Set,Sports,1,89.99,Debit Card,2023-01-14,89.99
+U1002,P403,Puma Sneakers,Footwear,1,59.99,Credit Card,2023-01-19,59.99
+
+U1003,P202,Slim Jeans,Fashion,1,59.99,Debit Card,2023-01-05,59.99
+U1003,P303,USB-C Hub,Electronics,1,79.99,Paypal,2023-01-11,79.99
+U1003,P601,Yoga Mat,Sports,1,19.99,Credit Card,2023-01-17,19.99
+U1003,P502,Coffee Maker,Home & Kitchen,1,89.99,Debit Card,2023-01-24,89.99
+
+U1004,P701,LED Monitor,Electronics,1,199.99,Credit Card,2023-01-06,199.99
+U1004,P205,Summer Dress,Fashion,1,44.99,Debit Card,2023-01-12,44.99
+U1004,P604,Resistance Bands,Sports,2,14.99,Paypal,2023-01-18,29.98
+
+U1005,P401,Nike Running Shoes,Footwear,1,89.99,Credit Card,2023-01-07,89.99
+U1005,P302,Wireless Mouse,Electronics,1,29.99,Paypal,2023-01-13,29.99
+U1005,P501,Blender Pro,Home & Kitchen,1,79.99,Debit Card,2023-01-21,79.99
+U1005,P203,Leather Jacket,Fashion,1,129.99,Credit Card,2023-01-26,129.99
+
+U1006,P103,Samsung Galaxy S21,Electronics,1,899.99,Credit Card,2023-01-08,899.99
+U1006,P204,Cotton Shirt,Fashion,2,34.99,Debit
+U1006,P204,Cotton Shirt,Fashion,2,34.99,Debit Card,2023-01-14,69.98
+U1006,P603,Exercise Ball,Sports,1,24.99,Paypal,2023-01-22,24.99
+

@@ -1,0 +1,33 @@
+product_id,product_name,product_category,price,stock_quantity,image_url
+P101,iPhone 12,Electronics,999.99,10,https://m.media-amazon.com/images/I/71ZOtNdaZCL._SX679_.jpg
+P102,AirPods Pro,Electronics,249.99,25,https://m.media-amazon.com/images/I/71zny7BTRlL._SX679_.jpg
+P103,Samsung Galaxy S21,Electronics,899.99,15,https://m.media-amazon.com/images/I/61t6wZV1n6L._SX679_.jpg
+P104,Apple Watch Series 6,Electronics,349.99,20,https://m.media-amazon.com/images/I/71y7N0sUjAL._SX679_.jpg
+P105,Laptop Stand,Electronics,49.99,30,https://m.media-amazon.com/images/I/61Zf4YjzY-L._SX679_.jpg
+P201,T-Shirt Classic,Fashion,29.99,50,https://m.media-amazon.com/images/I/61n0I6FZ0rL._SX679_.jpg
+P202,Slim Jeans,Fashion,59.99,40,https://m.media-amazon.com/images/I/71w+Zr4zZJL._SX679_.jpg
+P203,Leather Jacket,Fashion,129.99,25,https://m.media-amazon.com/images/I/81XH8ZpZC-L._SX679_.jpg
+P204,Cotton Shirt,Fashion,34.99,60,https://m.media-amazon.com/images/I/61y2VVWcGBL._SX679_.jpg
+P205,Summer Dress,Fashion,44.99,35,https://m.media-amazon.com/images/I/71kM8Z+ZQPL._SX679_.jpg
+P301,MacBook Air,Electronics,1199.99,10,https://m.media-amazon.com/images/I/71TPda7cwUL._SX679_.jpg
+P302,Wireless Mouse,Electronics,29.99,40,https://m.media-amazon.com/images/I/61UxfXTUyvL._SX679_.jpg
+P303,USB-C Hub,Electronics,79.99,30,https://m.media-amazon.com/images/I/61n8nY5vC5L._SX679_.jpg
+P304,LED Monitor 24-inch,Electronics,199.99,20,https://m.media-amazon.com/images/I/81QpkIctqPL._SX679_.jpg
+P401,Nike Running Shoes,Footwear,89.99,25,https://m.media-amazon.com/images/I/71J3y6c6b1L._SX679_.jpg
+P402,Adidas Socks,Fashion,14.99,50,https://m.media-amazon.com/images/I/71zZKz9ySFL._SX679_.jpg
+P403,Puma Sneakers,Footwear,59.99,30,https://m.media-amazon.com/images/I/71x3c7Zb0-L._SX679_.jpg
+P404,Flip Flops,Footwear,19.99,40,https://m.media-amazon.com/images/I/61u1VALn6JL._SX679_.jpg
+P501,Blender Pro,Home & Kitchen,79.99,25,https://m.media-amazon.com/images/I/71vY7Z8YpWL._SX679_.jpg
+P502,Coffee Maker,Home & Kitchen,89.99,30,https://m.media-amazon.com/images/I/61ZxjZt6yUL._SX679_.jpg
+P503,Microwave Oven,Home & Kitchen,129.99,20,https://m.media-amazon.com/images/I/71RZ+zQXlFL._SX679_.jpg
+P504,Toaster,Home & Kitchen,49.99,30,https://m.media-amazon.com/images/I/61A8sRry9VL._SX679_.jpg
+P601,Yoga Mat,Sports,19.99,25,https://m.media-amazon.com/images/I/71ZcZ4ZzZYL._SX679_.jpg
+P602,Dumbbell Set,Sports,89.99,20,https://m.media-amazon.com/images/I/71mZ8ZpZc-L._SX679_.jpg
+P603,Exercise Ball,Sports,24.99,30,https://m.media-amazon.com/images/I/71ZQpGJtD-L._SX679_.jpg
+P604,Resistance Bands,Sports,14.99,40,https://m.media-amazon.com/images/I/71E5RzjP3VL._SX679_.jpg
+P702,HDMI Cable,Electronics,29.99,40,https://m.media-amazon.com/images/I/61kKXc1jWCL._SX679_.jpg
+P703,External Hard Drive,Electronics,99.99,25,https://m.media-amazon.com/images/I/71f1K8zZp-L._SX679_.jpg
+P704,Bluetooth Speaker,Electronics,49.99,30,https://m.media-amazon.com/images/I/61U4Z8ZzZ-L._SX679_.jpg
+P801,Summer Dress,Fashion,44.99,35,https://m.media-amazon.com/images/I/71kM8Z+ZQPL._SX679_.jpg
+P802,Handbag,Fashion,79.99,20,https://m.media-amazon.com/images/I/71VZ8ZpZc-L._SX679_.jpg
+P901,Running Shoes,Footwear,89.99,25,https://m.media-amazon.com/images/I/71J3y6c6b1L._SX679_.jpg
