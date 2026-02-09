@@ -2,3 +2,6 @@ flask
 pandas
 scikit-learn
 gunicorn
+
+
+# https://copilot.microsoft.com/shares/2MZYMN2vGTAocQLjbJbaa
