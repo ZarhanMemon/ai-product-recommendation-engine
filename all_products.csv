@@ -1,12 +1,12 @@
 product_id,product_name,product_category,price,discount_price,stock_quantity,image_url,brand,rating,reviews_count
-P101,iPhone 14 Pro,Electronics,1299.99,1199.99,15,https://store.storeimages.cdn-apple.com/iphone14pro.jpg,Apple,4.8,2450
-P102,AirPods Pro 2,Electronics,249.99,229.99,30,https://store.storeimages.cdn-apple.com/airpodspro2.jpg,Apple,4.7,3100
-P201,Classic Cotton T-Shirt,Fashion,29.99,24.99,50,https://images.hm.com/classiccottontee.jpg,H&M,4.3,870
-P401,Nike Air Zoom Pegasus,Footwear,129.99,109.99,25,https://images.nike.com/pegasus.jpg,Nike,4.7,2100
-P301,MacBook Air M2,Electronics,1499.99,1399.99,10,https://store.storeimages.cdn-apple.com/macbookairm2.jpg,Apple,4.9,3200
-P501,NutriBullet Blender,Home & Kitchen,99.99,89.99,30,https://images.nutribullet.com/blender.jpg,NutriBullet,4.5,950
-P701,The Alchemist,Books,19.99,14.99,100,https://images.amazon.com/alchemist.jpg,HarperCollins,4.7,5200
-P801,L’Oreal Face Cream,Beauty & Personal Care,29.99,24.99,60,https://images.loreal.com/facecream.jpg,L’Oreal,4.5,2100
-P901,Monopoly Board Game,Toys & Games,39.99,34.99,50,https://images.hasbro.com/monopoly.jpg,Hasbro,4.6,3200
-P1001,Organic Almonds 1kg,Groceries,15.99,12.99,200,https://images.amazon.com/almonds.jpg,24Mantra,4.5,1100
-P1101,Wooden Study Table,Furniture,199.99,179.99,20,https://images.ikea.com/studytable.jpg,IKEA,4.6,980
+P101,iPhone 14 Pro,Electronics,1299.99,1199.99,15,static/product_images/iphone_14pro.jpg,Apple,4.8,2450
+P102,AirPods Pro 2,Electronics,249.99,229.99,30,static/product_images/AirPodsPro_2.jpg,Apple,4.7,3100
+P201,Classic Cotton T-Shirt,Fashion,29.99,24.99,50,static/product_images/Classic_Cotton_TShirt.jpg,H&M,4.3,870
+P401,Nike Air Zoom Pegasus,Footwear,129.99,109.99,25,static/product_images/NikeAirZoomPegasus.jpg,Nike,4.7,2100
+P301,MacBook Air M2,Electronics,1499.99,1399.99,10,static/product_images/MacBookAirM2.jpg,Apple,4.9,3200
+P501,NutriBullet Blender,Home & Kitchen,99.99,89.99,30,static/product_images/NutriBulletBlender.jpg,NutriBullet,4.5,950
+P701,The Alchemist,Books,19.99,14.99,100,static/product_images/TheAlchemist.jpg,HarperCollins,4.7,5200
+P801,L'Oreal Face Cream,Beauty & Personal Care,29.99,24.99,60,static/product_images/LOrealFaceCream.jpg,L'Oreal,4.5,2100
+P901,Monopoly Board Game,Toys & Games,39.99,34.99,50,static/product_images/MonopolyBoardGame.jpg,Hasbro,4.6,3200
+P1001,Organic Almonds 1kg,Groceries,15.99,12.99,200,static/product_images/OrganicAlmonds1kg.jpg,24Mantra,4.5,1100
+P1101,Wooden Study Table,Furniture,199.99,179.99,20,static/product_images/WoodenStudyTable.jpg,IKEA,4.6,980

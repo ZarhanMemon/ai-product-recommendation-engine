@@ -69,7 +69,7 @@ def recommend_products(customer_id, top_n=5):
     recommendations = recommendations.sort_values(by="final_score", ascending=False).head(top_n)
 
     return (
-        user_orders[["product_id",
+        user_orders[["product_id","product_img",
                      "product_name",
                      "product_category",
                      "quantity","price_usd",

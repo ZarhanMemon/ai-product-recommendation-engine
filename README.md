@@ -51,6 +51,7 @@ Displays recommendations with explainability
 ```
 project-root/
 │
+|__ product_images
 ├── app.py                    # Flask application
 ├── recommender.py            # Recommendation logic (hybrid scoring)
 │
