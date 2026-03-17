@@ -1,66 +1,73 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from recommender import recommend_products
 import pandas as pd
 import os
 
 app = Flask(__name__)
 
-# Load unique users for dropdown
+# ==============================
+# Load Data (Only Once)
+# ==============================
+
 orders_df = pd.read_csv("users_order.csv", encoding="utf-8")
-users = orders_df["customer_id"].unique()
+products_df = pd.read_csv("all_products.csv", encoding="utf-8")
+
+# Demo user (simulates logged-in user)
+DEMO_USER = "U1001"
+
+
+# ==============================
+# Home Page (Main E-commerce Page)
+# ==============================
 
 @app.route("/")
-def index():
-    """Landing page with user dropdown"""
-    return render_template("index.html", users=users)
+def home():
+    user_id = DEMO_USER
 
-
-
-@app.route("/recommend", methods=["POST"])
-def recommend():
-    """Show recommendations for selected user"""
-    user_id = request.form["user_id"]
+    # Get recommendation data
     bought, recommended = recommend_products(user_id)
 
-    # Pass both purchased and recommended products to template
     return render_template(
-        "recommendations.html",
-        user_id=user_id,
-        bought=bought,
-        recommended=recommended
+        "index.html",
+        products=products_df.to_dict("records"),   # All products (catalog)
+        recommended=recommended,                   # AI recommendations
+        bought=bought                              # Previously purchased
     )
 
+
+# ==============================
+# Products Page (Full Catalog)
+# ==============================
 
 @app.route("/products")
 def products():
-    """ show full product catalog with all fields  """
-    products_df = pd.read_csv("all_products.csv", encoding="utf-8")
-    return render_template("product.html", products=products_df.to_dict("records"))
+    return render_template(
+        "product.html",
+        products=products_df.to_dict("records")
+    )
 
 
-@app.route("/users")
-def users_list():
-    """  show all users and their purchase histories  """
-    orders_df = pd.read_csv("users_order.csv", encoding="utf-8")
-    return render_template("users.html", users=orders_df.to_dict("records"))
+# ==============================
+# Demo Recommendation Page (Optional for Viva)
+# ==============================
 
+@app.route("/recommendations")
+def recommendations():
+    user_id = DEMO_USER
 
-@app.route("/demo-recommend")
-def demo_recomm():
-    """ show sample recommendation for any 1 user"""
-    
-    user_id = "U1001"
     bought, recommended = recommend_products(user_id)
 
-    # Pass both purchased and recommended products to template
     return render_template(
         "recommendations.html",
         user_id=user_id,
         bought=bought,
         recommended=recommended
     )
+ 
 
-# backend server
+# ==============================
+# Run Server
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)

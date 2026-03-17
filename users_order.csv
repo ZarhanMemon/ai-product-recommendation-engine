@@ -1,7 +1,7 @@
 customer_id,product_id,product_name,product_category,quantity,price_usd,payment_method,order_date,total_amount,product_img
 U1001,P101,iPhone 12,Electronics,1,999.99,Credit Card,2023-01-05,999.99,static/product_images/iPhone12.jpg
-U1001,P102,AirPods Pro,Electronics,1,249.99,Paypal,2023-01-05,249.99,static/product_images/AirPodsPro.jpg
-U1001,P301,MacBook Air,Electronics,1,1199.99,Credit Card,2023-01-03,1199.99,static/product_images/MacBookAir.jpg
+U1001,P102,AirPods Pro,Electronics,1,249.99,Paypal,2023-01-05,249.99,static/product_images/AirPodsPro_2.jpg
+U1001,P301,MacBook Air,Electronics,1,1199.99,Credit Card,2023-01-03,1199.99,static/product_images/MacBookAirM2.jpg
 U1001,P501,Blender Pro,Home & Kitchen,1,79.99,Debit Card,2023-01-10,79.99,static/product_images/BlenderPro.jpg
 U1001,P404,Flip Flops,Footwear,2,19.99,Credit Card,2023-01-20,39.98,static/product_images/FlipFlops.jpg
 U1001,P201,T-Shirt Classic,Fashion,2,29.99,Debit Card,2023-01-25,59.98,static/product_images/TShirtClassic.jpg
@@ -13,7 +13,7 @@ U1002,P504,Toaster,Home & Kitchen,1,49.99,Paypal,2023-01-08,49.99,static/product
 U1002,P602,Dumbbell Set,Sports,1,89.99,Debit Card,2023-01-14,89.99,static/product_images/DumbbellSet.jpg
 U1002,P403,Puma Sneakers,Footwear,1,59.99,Credit Card,2023-01-19,59.99,static/product_images/PumaSneakers.jpg
 
-U1003,P301,MacBook Air,Electronics,1,1199.99,Credit Card,2023-01-10,1199.99,static/product_images/MacBookAir.jpg
+U1003,P301,MacBook Air,Electronics,1,1199.99,Credit Card,2023-01-10,1199.99,static/product_images/MacBookAirM2.jpg
 U1003,P302,Wireless Mouse,Electronics,2,29.99,Paypal,2023-01-10,59.98,static/product_images/WirelessMouse.jpg
 U1003,P202,Slim Jeans,Fashion,1,59.99,Debit Card,2023-01-05,59.99,static/product_images/SlimJeans.jpg
 U1003,P303,USB-C Hub,Electronics,1,79.99,Paypal,2023-01-11,79.99,static/product_images/USBC_Hub.jpg

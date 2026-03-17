@@ -1,62 +1,46 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>Users & Purchase Histories</title>
+    <meta charset="UTF-8">
+    <title>Users</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
 
-<div class="container my-4">
+<body>
 
- 
-    <h2 class="m-4">    
-        <a href="/" class="btn btn-secondary">⬅ Back</a>
-        All Users & Their Purchases
-    </h2>
+    <div class="container mt-4">
 
-    <!-- User Purchase Histories -->
-    <div class="accordion" id="usersAccordion">
-        {% for user in users %}
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="heading{{ loop.index }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
-                    Customer ID: {{ user.customer_id }}
-                </button>
-            </h2>
-            <div id="collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#usersAccordion">
-                <div class="accordion-body">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Category</th>
-                                <th>Quantity</th>
-                                <th>Price ($)</th>
-                                <th>Total ($)</th>
-                                <th>Order Date</th>
-                                <th>Payment Method</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{ user.product_name }}</td>
-                                <td>{{ user.product_category }}</td>
-                                <td>{{ user.quantity }}</td>
-                                <td>{{ user.price_usd }}</td>
-                                <td>{{ user.total_amount }}</td>
-                                <td>{{ user.order_date }}</td>
-                                <td>{{ user.payment_method }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
+        <h3>👥 Users Purchase Data</h3>
+
+        <table class="table table-bordered">
+
+            <tr>
+                <th>User</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+
+            {% for u in users %}
+
+            <tr>
+                <td>{{ u.customer_id }}</td>
+                <td>{{ u.product_name }}</td>
+                <td>{{ u.product_category }}</td>
+                <td>{{ u.price_usd }}</td>
+                <td>{{ u.order_date }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
     </div>
 
- </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
