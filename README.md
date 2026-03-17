@@ -1,14 +1,12 @@
  
----
-
 # 🛒 E-Commerce Product Recommendation System (Enhanced Version)
 
 A **Flask-based product recommendation system** that analyzes user purchase history from CSV files and recommends relevant products based on **category preferences, brand affinity, discounts, popularity, and similarity scoring**.
 
 This project is designed to be **simple, explainable, and demo-ready**, suitable for:
 
-* Mini-project / AI-ML integration demo  
-* Backend recommendation logic showcase  
+- Mini-project / AI-ML integration demo  
+- Backend recommendation logic showcase  
 
 ---
 
@@ -80,16 +78,15 @@ project-root/
 Each row represents **one product purchase** by a user.
 
 **Columns:**
-
-* `customer_id` – Unique user ID  
-* `product_id` – Product identifier  
-* `product_name` – Name of product  
-* `product_category` – Category (Electronics, Fashion, etc.)  
-* `quantity` – Quantity purchased  
-* `price_usd` – Price per unit  
-* `payment_method` – Credit Card / Debit Card / Paypal / UPI  
-* `order_date` – Purchase date  
-* `total_amount` – Final order value  
+- `customer_id` – Unique user ID  
+- `product_id` – Product identifier  
+- `product_name` – Name of product  
+- `product_category` – Category (Electronics, Fashion, etc.)  
+- `quantity` – Quantity purchased  
+- `price_usd` – Price per unit  
+- `payment_method` – Credit Card / Debit Card / Paypal / UPI  
+- `order_date` – Purchase date  
+- `total_amount` – Final order value  
 
 ✔ Users can purchase **multiple categories and brands** over time  
 
@@ -100,17 +97,16 @@ Each row represents **one product purchase** by a user.
 Contains **all available products** on the platform.
 
 **Columns:**
-
-* `product_id`  
-* `product_name`  
-* `product_category`  
-* `price`  
-* `discount_price`  
-* `stock_quantity`  
-* `image_url` (public real image URLs)  
-* `brand`  
-* `rating` (1–5 stars)  
-* `reviews_count` (number of reviews)  
+- `product_id`  
+- `product_name`  
+- `product_category`  
+- `price`  
+- `discount_price`  
+- `stock_quantity`  
+- `image_url` (public real image URLs)  
+- `brand`  
+- `rating` (1–5 stars)  
+- `reviews_count` (number of reviews)  
 
 ---
 
@@ -119,24 +115,24 @@ Contains **all available products** on the platform.
 The system uses a **hybrid content-based filtering approach**:
 
 ### 🔹 Step 1: User Profiling
-* Count category-wise purchases  
-* Identify dominant brands & categories  
-* Consider quantity and recency  
+- Count category-wise purchases  
+- Identify dominant brands & categories  
+- Consider quantity and recency  
 
 ### 🔹 Step 2: Product Matching
-* Recommend products from:  
+- Recommend products from:  
   * Frequently bought categories  
   * Same brands or related brands  
-* Exclude already purchased products  
+- Exclude already purchased products  
 
 ### 🔹 Step 3: Hybrid Similarity Score
 Each recommended product gets a score based on:
 
-* Category match (cosine similarity)  
-* Brand affinity  
-* Popularity (rating + reviews)  
-* Discount attractiveness  
-* Recency bonus  
+- Category match (cosine similarity)  
+- Brand affinity  
+- Popularity (rating + reviews)  
+- Discount attractiveness  
+- Recency bonus  
 
 Example:
 
@@ -156,27 +152,27 @@ This score is shown in the UI for **explainability**.
 1️⃣ User selects **Customer ID** from dropdown  
 
 2️⃣ System shows:  
-* Previously purchased products  
-* Recommended products  
+- Previously purchased products  
+- Recommended products  
 
 3️⃣ Recommendation cards include:  
-* Product image  
-* Name, category, brand  
-* Price (with discount)  
-* Rating & reviews  
-* Similarity score badge  
+- Product image  
+- Name, category, brand  
+- Price (with discount)  
+- Rating & reviews  
+- Similarity score badge  
 
 ---
 
 ## ⚙️ Technologies Used
 
-* **Python 3**  
-* **Flask** – Backend web framework  
-* **Pandas** – Data processing  
-* **Scikit-learn** – Cosine similarity  
-* **Jinja2** – HTML templating  
-* **Bootstrap 5** – Frontend styling  
-* **CSV Files** – Data storage  
+- **Python 3**  
+- **Flask** – Backend web framework  
+- **Pandas** – Data processing  
+- **Scikit-learn** – Cosine similarity  
+- **Jinja2** – HTML templating  
+- **Bootstrap 5** – Frontend styling  
+- **CSV Files** – Data storage  
 
 ---
 
@@ -207,19 +203,15 @@ http://127.0.0.1:5000/
 
 ## 🚀 Future Enhancements
 
-* Collaborative filtering  
-* ML-based embeddings (Word2Vec, BERT)  
-* User clustering  
-* Database integration (MySQL / MongoDB)  
-* Login-based personalization  
-* Chart.js analytics (category distribution, score breakdown)  
+- Collaborative filtering  
+- ML-based embeddings (Word2Vec, BERT)  
+- User clustering  
+- Database integration (MySQL / MongoDB)  
+- Login-based personalization  
+- Chart.js analytics (category distribution, score breakdown)  
 
 ---
 
 ## 📌 Conclusion
 
 This project simulates a **real e-commerce recommendation engine** using hybrid scoring (category + brand + popularity + discount), making it ideal for **learning, demos, and academic evaluation**.  
-
----
-
-👉 Would you like me to also **add a section in the README with screenshots of the UI (recommendations.html, products.html, users.html)** so your faculty demo looks even more professional?

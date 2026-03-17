@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from recommender import recommend_products
 import pandas as pd
 import os
@@ -22,18 +22,29 @@ DEMO_USER = "U1001"
 
 @app.route("/")
 def home():
-    user_id = DEMO_USER
+    user_id = "U1001"
 
-    # Get recommendation data
+    # Get search query
+    query = request.args.get("search")
+
+    # Load products
+    if query:
+        filtered_products = products_df[
+            products_df["product_name"].str.contains(query, case=False, na=False) |
+            products_df["product_category"].str.contains(query, case=False, na=False)
+        ]
+    else:
+        filtered_products = products_df
+
     bought, recommended = recommend_products(user_id)
 
     return render_template(
         "index.html",
-        products=products_df.to_dict("records"),   # All products (catalog)
-        recommended=recommended,                   # AI recommendations
-        bought=bought                              # Previously purchased
+        recommended=recommended,
+        bought=bought,
+        products=filtered_products.to_dict("records"),
+        search_query=query
     )
-
 
 # ==============================
 # Products Page (Full Catalog)

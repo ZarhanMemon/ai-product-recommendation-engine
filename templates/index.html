@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -31,8 +30,8 @@
         /* Hero */
         .hero {
             background: url('https://images.unsplash.com/photo-1607082349566-187342175e2f') no-repeat center;
-            background-size: cover;
-            height: 300px;
+            background-size:cover;
+            height: 350px;
             border-radius: 10px;
         }
 
@@ -60,29 +59,39 @@
             font-weight: bold;
         }
 
-        /* Recommended Section Highlight */
+        /* Recommended Section */
         .recommend-section {
             background: white;
             padding: 20px;
             border-radius: 10px;
         }
-    </style>
 
+        
+    </style>
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-
     <nav class="navbar navbar-expand-lg">
         <div class="container">
 
             <a class="navbar-brand" href="/">🛒 SmartShop</a>
 
-            <input class="form-control search-bar" placeholder="Search products...">
+            <!-- SEARCH BAR -->
+            <form method="GET" action="/" class="d-flex ms-3">
+                <input 
+                    class="form-control search-bar me-2"
+                    type="text" 
+                    name="search" 
+                    placeholder="Search for products..." 
+                    value="{{ search_query if search_query else '' }}"
+                >
+                <button class="btn btn-warning">Search</button>
+                <a href="/" class="btn btn-outline-light ms-2">Clear</a>
+            </form>
 
-            <a href="/products" class="btn btn-warning ms-2">Products</a>
-
+            <a href="/products" class="btn btn-warning ms-3">Products</a>
             <a href="/recommendations" class="btn btn-outline-light ms-2">Recommendations</a>
 
         </div>
@@ -90,20 +99,23 @@
 
     <div class="container mt-4">
 
-        <!-- HERO BANNER -->
-
+        <!-- HERO -->
         <div class="hero mb-4"></div>
 
         <!-- ALL PRODUCTS -->
-
         <h3 class="section-title">🛍️ All Products</h3>
+
+        <!-- SEARCH RESULT TEXT -->
+        {% if search_query %}
+        <p class="text-muted">
+            Showing results for: <b>"{{ search_query }}"</b>
+        </p>
+        {% endif %}
 
         <div class="row">
 
             {% for item in products %}
-
             <div class="col-md-3 mb-4">
-
                 <div class="card product-card">
 
                     <img src="{{ item.image_url }}" class="product-img">
@@ -124,23 +136,26 @@
                     </div>
 
                 </div>
-
             </div>
-
             {% endfor %}
 
         </div>
 
-        <!-- RECOMMENDED PRODUCTS -->
+        <!-- NO RESULTS -->
+        {% if products|length == 0 %}
+        <div class="text-center mt-4">
+            <h5>No products found 😢</h5>
+        </div>
+        {% endif %}
 
-        <div class="recommend-section">
+        <!-- RECOMMENDED -->
+        <div class="recommend-section mt-4">
 
             <h3 class="section-title">🔥 Recommended For You</h3>
 
             <div class="row">
 
                 {% for item in recommended %}
-
                 <div class="col-md-3 mb-4">
 
                     <div class="card product-card">
@@ -165,21 +180,18 @@
                     </div>
 
                 </div>
-
                 {% endfor %}
 
             </div>
 
         </div>
 
-        <!-- PREVIOUSLY PURCHASED -->
-
+        <!-- BOUGHT -->
         <h3 class="section-title">🕘 Previously Purchased</h3>
 
         <div class="row">
 
             {% for item in bought %}
-
             <div class="col-md-3 mb-4">
 
                 <div class="card product-card">
@@ -199,7 +211,6 @@
                 </div>
 
             </div>
-
             {% endfor %}
 
         </div>
