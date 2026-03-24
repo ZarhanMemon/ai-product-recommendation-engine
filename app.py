@@ -13,7 +13,7 @@ orders_df = pd.read_csv("users_order.csv", encoding="utf-8")
 products_df = pd.read_csv("all_products.csv", encoding="utf-8")
 
 # Demo user (simulates logged-in user)
-DEMO_USER = "U1001"
+DEMO_USER = "U1002"
 
 
 # ==============================
@@ -22,7 +22,7 @@ DEMO_USER = "U1001"
 
 @app.route("/")
 def home():
-    user_id = "U1001"
+    user_id = "U1002"
 
     # Get search query
     query = request.args.get("search")
