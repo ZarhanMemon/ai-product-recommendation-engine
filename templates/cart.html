@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ensure all product cards have consistent height */
+        .product-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Fix image box size */
+        .product-img {
+            height: 180px;
+            /* fixed height */
+            width: 100%;
+            /* full card width */
+            object-fit: contain;
+            /* keep aspect ratio */
+            padding: 10px;
+        }
+
+        /* Card body alignment */
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">🛒 SmartShop</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h3>🛒 Your Cart</h3>
+        {% if cart_items %}
+        <div class="row">
+            {% for item in cart_items %}
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="{{ item.image_url }}" class="product-img">
+                    <div class="card-body text-center">
+                        <h6>{{ item.product_name }}</h6>
+                        <p class="text-muted small">{{ item.product_category }}</p>
+                        <h5>$ {{ item.discount_price }}</h5>
+
+
+                        <div class="d-flex justify-content-center align-items-center gap-2 mt-2">
+                            <a href="{{ url_for('add_to_cart', product_id=item.product_id) }}"
+                                class="btn btn-sm btn-success">+</a>
+                            <span>{{ item.quantity }}</span>
+                            <a href="{{ url_for('decrease_quantity', product_id=item.product_id) }}"
+                                class="btn btn-sm btn-warning">-</a>
+                            <a href="{{ url_for('remove_from_cart', product_id=item.product_id) }}"
+                                class="btn btn-sm btn-danger">Remove</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Total Price -->
+        <div class="mt-3 text-start">
+            <h4>Total: $ {{ total }}</h4>
+            <a href="#" class="btn btn-success">Proceed to Checkout</a>
+        </div>
+
+   
+        {% else %}
+        <p class="text-muted">Your cart is empty 😢</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
