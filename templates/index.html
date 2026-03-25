@@ -110,10 +110,47 @@
         <!-- HERO -->
         <div class="hero mb-4"></div>
 
+        <!-- RECOMMENDED -->
+        <div class="recommend-section mt-4">
+
+            <h3 class="section-title">Recommended For You</h3>
+
+            <div class="row">
+
+                {% for item in recommended %}
+                <div class="col-md-3 mb-4">
+
+                    <div class="card product-card">
+
+                        <img src="{{ item.image_url }}" class="product-img">
+
+                        <div class="card-body text-center">
+
+                            <h6>{{ item.product_name }}</h6>
+
+                            <p class="text-muted small">{{ item.product_category }}</p>
+
+                            <h5>
+                                <span class="text-muted"><s>$ {{ item.price }}</s></span>
+                                $ {{ item.discount_price }}
+                            </h5>
+
+                            <button class="btn btn-sm btn-warning">Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
         <!-- ALL PRODUCTS -->
         <h3 class="section-title"> All Products</h3>
 
-        <!-- SEARCH RESULT TEXT -->
         {% if search_query %}
         <p class="text-muted">
             Showing results for: <b>"{{ search_query }}"</b>
@@ -150,7 +187,6 @@
 
         </div>
 
-        <!-- NO RESULTS -->
         {% if products|length == 0 %}
         <div class="text-center mt-4">
             <h5>No products found 😢</h5>
@@ -160,7 +196,7 @@
         <!-- RECOMMENDED -->
         <div class="recommend-section mt-4">
 
-            <h3 class="section-title"> Recommended For You</h3>
+            <h3 class="section-title">🔥 Recommended For You</h3>
 
             <div class="row">
 
@@ -182,8 +218,7 @@
                                 $ {{ item.discount_price }}
                             </h5>
 
-                            <a href="{{ url_for('add_to_cart', product_id=item.product_id) }}"
-                                class="btn btn-sm btn-warning">Add to Cart</a>
+                            <button class="btn btn-sm btn-warning">Add to Cart</button>
 
                         </div>
 
@@ -197,7 +232,7 @@
         </div>
 
         <!-- BOUGHT -->
-        <h3 class="section-title"> Previously Purchased</h3>
+        <h3 class="section-title">🕘 Previously Purchased</h3>
 
         <div class="row">
 

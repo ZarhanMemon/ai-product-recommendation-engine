@@ -25,7 +25,7 @@ products_df = pd.read_csv("all_products.csv", encoding="utf-8")
 all_products = products_df.to_dict("records")
 
 # Demo user (simulates logged-in user)
-DEMO_USER = "U1001"
+DEMO_USER = "U1002"
 
 
 # ==============================
@@ -34,7 +34,7 @@ DEMO_USER = "U1001"
 
 @app.route("/")
 def home():
-    user_id = "U1001"
+    user_id = "U1002"
 
     # Get search query
     query = request.args.get("search")
